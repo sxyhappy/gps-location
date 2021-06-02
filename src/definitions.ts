@@ -1,3 +1,8 @@
+export interface CurrentLocation {
+  latitude: number;
+  longitude: number;
+}
+
 export interface GeoLocationPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getLocation: () => Promise<CurrentLocation>;
 }
